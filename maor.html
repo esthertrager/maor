@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  .no-bottom-margin {
+    margin-bottom: 0px;
+  }
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#staff">STAFF</a></li>
+        <li><a href="#faqs">FAQ's</a></li>
+        <li><a href="#apply">APPLY</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#donate">DONATE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Maor Michigan</h1> 
+  <p>Dedicated to Awakening Each Child's Individual Path in Avodas Hashem</p> 
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Maor Michigan</h2><br>
+      <h4>Maor Michigan is the first Jewish Montessori elementary program in Michigan. Building on the longstanding success of Ganeinu, a Chassidic Montessori preschool in West Bloomfield, Maor provides a truly child-centered approach to elementary education.  Our first classroom will be a mixed age class serving students in kindergarten and first grade.
+</h4><br>
+      <p>Maor is dedicated to awakening each child's individual path in avodas Hashem, nurturing a love of Torah, and creating a community of engaged learners. At Maor, we encourage each child’s innate curiosity, and develop their tools for independence, responsibility, and a lifelong love of Yiddishkeit and Torah learning. We do this by inspiring each child to develop themselves intellectually, spiritually, and emotionally using Montessori methods and an evidence-based approach to al pi darko learning.
+      <br>
+      <br>
+      We are so excited to bring this beautiful program to the Greater Detroit community!</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid text-center bg-grey">
+  <h2>Our Values</h2><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>POWER</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>GREEN</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>CERTIFIED</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">HARD WORK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="staff" class="container-fluid">
+  <h2>Staff</h2>
+  <h4 class="no-bottom-margin"><strong>ILANA SPENCER:</strong> Curriculum Director and Lead Teacher</h4>
+  <p>Morah Ilana has been working as a teacher for 8 years, and has lived in the Crown Heights Chabad community for 16 years. She joins us in Michigan after teaching in Lamplighters Yeshivah, a Chassidic Montessori school in Crown Heights, Brooklyn for 5 years. She has a passion for teaching children about the world through a Torah lens, and integrating what has been traditionally separate Torah and general studies to reflect the ein od milvado philosophy of Chassidus. She is currently a Masters candidate in education administration at the University of Michigan after leading a school-wide academic assessment project and faculty curriculum collaboration at Lamplighters. She is eager to bring light to a new community of families seeking holistic al pi darko chinuch.
+</p>
+  <br>
+  <h4 class="no-bottom-margin"><strong>LIAT FELDMAN:</strong> Assistant Teacher</h4>
+  <p>Liat bio....orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<!-- Container (FAQ's Section) -->
+<div id="faqs" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+  <h2 class="no-bottom-margin">Frequently Asked Questions</h2><br>
+  <h4 class="no-bottom-margin">Will the school have a uniform/dress code?</h4>
+  <p>Yes</p>
+  <h4 class="no-bottom-margin">What age children will be in the first class?</h4> 
+  <p>The first class will serve kindergarten and first grade students.</p>
+  <h4 class="no-bottom-margin">Where will the classroom be located?</h4>
+  <p>On Ganeinu Campus</p>
+  <h4 class="no-bottom-margin">Will there be a bus system from Oak Park and Southfield?</h4>
+  <p>We do not currently have a bus program in place. Depending on enrollment, we may be able to arrange for busing from OP/SF.</p>
+  <h4 class="no-bottom-margin">Which rav is advising the board?</h4>
+  <p>The Maor Michigan Advisory Board is currently seeking a permanent rabbinic advisor. In the interim, all halachic and hashkafic questions will be directed to Rabbi and Rebbetzin Bergstein.</p>
+  <h4 class="no-bottom-margin">Who are the decisionmakers of Maor Michigan?</h4>
+  <p>Maor Michigan currently has an interim Advisory Board that is dedicated to founding this organization with best practices in place.</p>
+  <h4 class="no-bottom-margin">Will there be homework?</h4>
+  <p>In our program, homework will only be given to a student when the educator observes the student’s need for review and reinforcement in a particular area.  Homework will be tailored to the specific needs and level of the student rather than being a blanket assignment for an entire class. On occasion, certain projects may require a student to complete his or her work at home. Also, the educators may create a “homework club” or other fun opportunities for students to voluntarily continue and be recognized for additional work done at home to develop their learning and skills.</p>
+  <h4 class="no-bottom-margin">How do children do when transitioning from a Montessori school to a traditional school setting?</h4>
+  <p>In a Montessori school, the environment is designed to foster independence and initiative. This is done by assessing what is developmentally appropriate at each age for each child, both as a student and a community member, and building a child’s sense of ownership over their learning and interpersonal relationships. This has a positive effect on a child’s experiences outside this environment.  Montessori students often emerge as leaders among their peers and in their learning. Adaptability is a key skill that comes with independence, so adapting to more structured environments is usually not an issue for Montessori students. In fact, there is a misconception that a Montessori environment is structureless. To the contrary, each work and work expectation is quite structured, with the added bonus of freedom of choice and spontaneity to foster excitement for the subject matter. For as long as it is possible for a child to have these privileges, they only stand to benefit for future, different environments. The ultimate goal is to create empowered learners who are not dependent on top-down instruction. This presents as an asset and not a handicap.</p>
+  <h4 class="no-bottom-margin">Is this a school that will prepare them adequately for Yeshiva or high school?</h4> 
+  <p>(Let’s save this question for later.)</p>
+  <h4 class="no-bottom-margin">Who is this school for?</h4>
+  <p>Maor Michigan serves Torah observant families who are seeking a holistic approach to Jewish education.</p>
+  <h4 class="no-bottom-margin">Is there a security plan?</h4>
+  <p>(I will be discussing this with Rebbetzin Bergstein)</p>
+  <h4 class="no-bottom-margin">What are the school hours?</h4>
+  <p>(We need to discuss school hours. Initially, we discussed starting at 9 a.m. so that drop off for Ganeinu and Maor is at the same time. Ilana, explained to me why starting earlier could be much better for the learning cycles in the classroom. My inclination, based on our circumstances and Ilana’s input is to start at 9 a.m. and end at 3:40 p.m. Let’s put this as an agenda item.)
+  Maor Michigan classes will be in session from 9 a.m. to 3:40 p.m. It is critical that our students arrive on time in order that they may experience the full benefit of our integrated curriculum.</p>
+  <h4 class="no-bottom-margin">What makes Montessori a unique approach to Chinuch/education? Why is it preferable?</h4>
+  <p>Imagine taking away all expectations for what a school must be, and replacing these expectations with a vision for what childhood and learning could be. A Montessori environment does not have a status quo to answer to: the setup of the classroom can allow for precisely what a child’s developmental stage most demands, and the teacher is allowed to foster curiosity, independence, and a truly individualized learning experience. Depending on the age of the children, they may decide to work on the floor or on a table. They may decide to work socially or to find a quiet space all their own. Their work is exactly as tangible or abstract as it needs to be a for child’s mind to truly grasp the subject matter. Most importantly, there is freedom of choice and freedom of movement. With freedom of choice, a child is free to be drawn to what most inspires and fascinates them - ideal conditions for absorbing new information. They can take the time they need to spend with each material. Freedom of movement and the use of manipulatives allows a child’s brain and body to be in sync. Particularly for younger children, this is critical to their development and learning.</p>
+  <h4 class="no-bottom-margin">If the child is given so much freedom, how will they understand kabbalas ol?</h4>
+  <p>A unique aspect of Montessori among other progressive education models is actually the extent to how fixed and meticulous the actual materials and expectations are. The intention behind this decision is to allow children to experience how the real world works and operates. Students stand to gain the most from experiences that work within the parameters of real life. This is the purpose of the sensorial section of a Montessori preschool classroom: the various blocks and materials are designed to only function when a child discovers, through trial and error, what does and does not balance or fit. There is a clear distinction to the child what is a correct, accurate, and satisfying way to work with the materials. This experience replicates itself in various ways and various ages. In teaching children about the Torah and Halacha, they need to have this foundational understanding of Hashem’s world - namely, Hashem made an orderly, principled world, and our actions have an impact. Halacha expects that we understand Hashem’s rules and how our actions play a part in it. It is never too early to learn this lesson.</p>
+  <h4 class="no-bottom-margin">How does discipline work in a Montessori classroom?</h4>
+  <p>The primary purpose of discipline in a Montessori classroom is for constructive, teaching purposes. Children should be well aware of what age-appropriate behavior expectations underlie the classroom far before it comes to a point where a teacher might, in the moment, correct a new behavior. Wherever possible, natural consequences are used. Natural consequences are what guide adults in their decision making. For example, if you forget to shop for groceries, you don’t get to eat dinner that evening. If you work hard cleaning your house today, you will enjoy a clean environment tomorrow. Wherever possible, natural consequences are most effective in a classroom setting. They take out the punitive and potentially relationship damaging aspect of traditional discipline or “punishments” and replace it with logical repercussions that bear directly on the child’s decision. If a child did not clean up after their snack, for example, they may not be invited to the next interesting activity until they fulfill their responsibility to maintain the clean classroom environment.</p>
+  <h4 class="no-bottom-margin">Are a child’s social skills developed in a Montessori classroom?</h4>
+  <p>A Montessori classroom is a model of community. Individual students, each learning at their own pace, coexist and support one another. Especially at the elementary age, more social learning opportunities present themselves than in a traditional classroom with each child working on their own separate desk. Lunch time, davening, recess, and community meetings twice a day allow for the community as a whole to experience the rhythms of life together. As with the academic materials, the social environment in the classroom is geared toward a child’s developmental stage. At around 6 years old, children tend to leave the more egoistic stage of early childhood and become interested in how they fit in with their peers. The setup and planning for both learning and community time keep this heightened need for social interaction in mind.</p>
+  <h4 class="no-bottom-margin">Why is there an age range in a Montessori classroom? Why are the children not grouped by grade?</h4>
+  <p>Multi-age classrooms have several benefits:</p>
+  <p>Teachers can develop a relationship with a child and family over a three year period, so the child’s growth is more deeply understood as the years progress.</p>
+  <p>An established culture of seasoned students allows for a classroom to be a settled place with ingrained behaviors consistently modeled from the first day of school. New students quickly understand what is expected of them.</p>
+  <p>The best way to learn is to teach. Teaching a younger friend allows a child to reinforce their knowledge and skills, boost their confidence, and allow natural leadership skills and empathy to develop.</p>
+  <p>Students learn well from their peers. Having an older friend guide and teach can provide value and understanding of a different quality and benefit than a teacher could provide.</p>
+  <p>Older children practice their patience and leadership, while younger students have role models and observe privileges they can earn in time.</p>
+  <p>Having three years worth of academic materials in the classroom allows for each child to make their way through the curriculum at their own pace. Sometimes, boosts of interest or abilities happen outside of the 1-year constraints traditional classrooms must work within, and a Montessori environment allows for flexibility.</p>
+
+</h4>
+  </div><br>
+  </div>
+</div>
+
+<!-- Container (Apply Section) -->
+<div id="apply" class="container-fluid">
+  <div>
+    <h2>Apply</h2>
+    <h4>Application process description</h4>
+  </div>
+  
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2>CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <h4>Questions? Comments? Get in Touch!</h4>
+      <p><span class="glyphicon glyphicon-map-marker"></span> 4230 Middlebelt Road</p>
+      <p>West Bloomfield, MI 48323</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> MaorMichigan@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (donate section) -->
+<div id="donate" class="container-fluid">
+  <h2>Donate</h2>
+  <h4>Coming Soon!</h4>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
