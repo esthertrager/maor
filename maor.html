@@ -10,11 +10,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/27cece6ff8.js"></script>
   <style>
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
+  }
+  i {
+    color: #818181;
   }
   h2 {
       font-size: 24px;
@@ -29,13 +33,22 @@
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
-  }  
-  .jumbotron {
-      background-color: #f4511e;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
   }
+  .nav > li > a {
+    padding: 10px 14px;
+  }
+  .jumbotron {
+    display: block;
+      background: url("IMG_9819.jpg") no-repeat center top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-family: Montserrat, sans-serif;
+      color: white;
+  }
+  #dummy {
+    padding-top: 66.67%;
+}
   .container-fluid {
       padding: 60px 50px;
   }
@@ -156,6 +169,30 @@
   .no-bottom-margin {
     margin-bottom: 0px;
   }
+  .no-bottom-padding {
+    padding-bottom: 0px;
+  }
+  .orange {
+    color: #f4511e;
+    font-size: 20px;
+  }
+  #about {
+    padding-top: 0px;
+    margin-top: -175px;
+  }
+  .vertical-align {
+    /*display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;*/
+    position: absolute; 
+   top: 50%; 
+   left: 0;
+   text-align: center; 
+   width: 100%;  
+}
   
   @keyframes slide {
     0% {
@@ -177,6 +214,21 @@
       -webkit-transform: translateY(0%);
     }
   }
+  /*@media screen and (min-width: 320px) {
+    .jumbotron {
+      height: 210px;
+    }
+  }
+  @media screen and (min-width: 480px) {
+    .jumbotron {
+      height: 320px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .jumbotron {
+      height: 510px;
+    }
+  }*/
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
@@ -209,6 +261,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">ABOUT</a></li>
+        <li><a href="#values">VALUES</a></li>
         <li><a href="#staff">STAFF</a></li>
         <li><a href="#faqs">FAQ's</a></li>
         <li><a href="#apply">APPLY</a></li>
@@ -220,12 +273,16 @@
 </nav>
 
 <div class="jumbotron text-center">
+  <div class="vertical-align">
   <h1>Maor Michigan</h1> 
-  <p>Dedicated to Awakening Each Child's Individual Path in Avodas Hashem</p> 
+  <p>Dedicated to Awakening Each Child's Individual Path in Avodas Hashem</p>
+  </div> 
+  <div id="dummy"></div>
 </div>
 
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
+
   <div class="row">
     <div class="col-sm-8">
       <h2>About Maor Michigan</h2><br>
@@ -237,9 +294,14 @@
       We are so excited to bring this beautiful program to the Greater Detroit community!</p>
     </div>
   </div>
+  <div class="container-fluid text-center no-bottom-padding no-bottom-margin">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up orange"></span>
+  </a>
+  </div>
 </div>
 
-<div class="container-fluid text-center bg-grey">
+<div id="values" class="container-fluid text-center bg-grey">
   <h2>Our Values</h2><br>
   <div class="row slideanim">
     <div class="col-sm-4">
@@ -276,9 +338,14 @@
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
   </div>
+  <div class="container-fluid text-center no-bottom-padding no-bottom-margin">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up orange"></span>
+  </a>
+  </div>
 </div>
 
-<!-- Container (Services Section) -->
+<!-- Container (Staff Section) -->
 <div id="staff" class="container-fluid">
   <h2>Staff</h2>
   <h4 class="no-bottom-margin"><strong>ILANA SPENCER:</strong> Curriculum Director and Lead Teacher</h4>
@@ -287,6 +354,11 @@
   <br>
   <h4 class="no-bottom-margin"><strong>LIAT FELDMAN:</strong> Assistant Teacher</h4>
   <p>Liat bio....orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <div class="container-fluid text-center no-bottom-padding no-bottom-margin">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up orange"></span>
+  </a>
+  </div>
 </div>
 
 <!-- Container (FAQ's Section) -->
@@ -332,15 +404,20 @@
   <p>A Montessori classroom is a model of community. Individual students, each learning at their own pace, coexist and support one another. Especially at the elementary age, more social learning opportunities present themselves than in a traditional classroom with each child working on their own separate desk. Lunch time, davening, recess, and community meetings twice a day allow for the community as a whole to experience the rhythms of life together. As with the academic materials, the social environment in the classroom is geared toward a child’s developmental stage. At around 6 years old, children tend to leave the more egoistic stage of early childhood and become interested in how they fit in with their peers. The setup and planning for both learning and community time keep this heightened need for social interaction in mind.</p>
   <h4 class="no-bottom-margin">Why is there an age range in a Montessori classroom? Why are the children not grouped by grade?</h4>
   <p>Multi-age classrooms have several benefits:</p>
-  <p>Teachers can develop a relationship with a child and family over a three year period, so the child’s growth is more deeply understood as the years progress.</p>
-  <p>An established culture of seasoned students allows for a classroom to be a settled place with ingrained behaviors consistently modeled from the first day of school. New students quickly understand what is expected of them.</p>
-  <p>The best way to learn is to teach. Teaching a younger friend allows a child to reinforce their knowledge and skills, boost their confidence, and allow natural leadership skills and empathy to develop.</p>
-  <p>Students learn well from their peers. Having an older friend guide and teach can provide value and understanding of a different quality and benefit than a teacher could provide.</p>
-  <p>Older children practice their patience and leadership, while younger students have role models and observe privileges they can earn in time.</p>
-  <p>Having three years worth of academic materials in the classroom allows for each child to make their way through the curriculum at their own pace. Sometimes, boosts of interest or abilities happen outside of the 1-year constraints traditional classrooms must work within, and a Montessori environment allows for flexibility.</p>
-
-</h4>
+  <ul style="list-style-type:circle">
+  <li>Teachers can develop a relationship with a child and family over a three year period, so the child’s growth is more deeply understood as the years progress.</li>
+  <li>An established culture of seasoned students allows for a classroom to be a settled place with ingrained behaviors consistently modeled from the first day of school. New students quickly understand what is expected of them.</li>
+  <li>The best way to learn is to teach. Teaching a younger friend allows a child to reinforce their knowledge and skills, boost their confidence, and allow natural leadership skills and empathy to develop.</li>
+  <li>Students learn well from their peers. Having an older friend guide and teach can provide value and understanding of a different quality and benefit than a teacher could provide.</li>
+  <li>Older children practice their patience and leadership, while younger students have role models and observe privileges they can earn in time.</li>
+  <li>Having three years worth of academic materials in the classroom allows for each child to make their way through the curriculum at their own pace. Sometimes, boosts of interest or abilities happen outside of the 1-year constraints traditional classrooms must work within, and a Montessori environment allows for flexibility.</li>
+  </ul>
   </div><br>
+  </div>
+  <div class="container-fluid text-center no-bottom-padding no-bottom-margin">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up orange"></span>
+  </a>
   </div>
 </div>
 
@@ -349,8 +426,13 @@
   <div>
     <h2>Apply</h2>
     <h4>Application process description</h4>
+    <a href="application.pdf">Application Form</a>
   </div>
-  
+  <div class="container-fluid text-center no-bottom-padding no-bottom-margin">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up orange"></span>
+  </a>
+  </div>
 </div>
 
 <!-- Container (Contact Section) -->
@@ -362,6 +444,10 @@
       <p><span class="glyphicon glyphicon-map-marker"></span> 4230 Middlebelt Road</p>
       <p>West Bloomfield, MI 48323</p>
       <p><span class="glyphicon glyphicon-envelope"></span> MaorMichigan@gmail.com</p>
+      <p><a href="https://www.facebook.com/MaorMichigan/" target="_blank">
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          </a>
+      </p>
     </div>
     <div class="col-sm-7 slideanim">
       <div class="row">
@@ -379,6 +465,11 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="container-fluid text-center no-bottom-padding no-bottom-margin">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up orange"></span>
+  </a>
   </div>
 </div>
 
